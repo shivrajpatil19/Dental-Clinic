@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CLINIC_INFO } from "@/lib/constants";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +20,16 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-foreground">
-              {CLINIC_INFO.name}
-            </span>
+        <div className="flex justify-between h-24 md:h-28 items-center">
+          <Link href="/" className="flex items-center shrink-0">
+            <Image 
+              src="/logo_transparent.png" 
+              alt="Geetai Dental Hospital" 
+              width={400}
+              height={120}
+              className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+              priority
+            />
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
