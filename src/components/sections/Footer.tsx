@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CLINIC_INFO } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,9 +9,17 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">{CLINIC_INFO.name}</h3>
-            <p className="text-gray-300 max-w-xs">
+          <div className="space-y-6">
+            <Link href="/" className="inline-flex items-center justify-center bg-white/85 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/50 shadow-[0_8px_32px_rgba(255,255,255,0.15)] transition-all duration-300 hover:scale-[1.02] hover:bg-white/95">
+              <Image 
+                src="/logo_transparent.png" 
+                alt="Geetai Dental Hospital" 
+                width={400}
+                height={120}
+                className="h-16 md:h-20 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-gray-300 max-w-xs pt-2 leading-relaxed">
               Providing state-of-the-art dental care with a gentle touch. Your smile is our top priority.
             </p>
           </div>
