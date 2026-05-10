@@ -18,18 +18,23 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Sarah Jenkins",
-      text: "The best dental experience I've ever had. The staff was incredibly welcoming and the procedure was completely painless.",
+      name: "Jyoti Lone",
+      text: "Excellent treatment dr dhumal sir and staff is very kind n co operative to the patient.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      text: "Professional, clean, and efficient. I highly recommend them to anyone looking for top-notch dental care.",
+      name: "Hemant Deshmukh",
+      text: "Dr Dhumal is very kind and great personality. We proud of him. Practice is more effective. The way he handled patients very carefully. Thank u.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      text: "I used to be terrified of the dentist, but their gentle approach completely changed my perspective.",
+      name: "Rohit Ramesh Fulari",
+      text: "Nice clinic, Dr. is very friendly and kind. Proper Diagnosis, Treatment at pocket friendly cost. I recommend you to visit.👍👍",
+      rating: 5
+    },
+    {
+      name: "Arvind Meshram",
+      text: "Well-known doctor, in Nagpur, best treatment, & I'm always refer this doctor to other.",
       rating: 5
     }
   ];
@@ -90,7 +95,7 @@ export default function Home() {
             >
               <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
                 <Image 
-                  src="/assets/hero_clinic.png"
+                  src="/clinic.png"
                   alt="Modern Dental Clinic"
                   fill
                   className="object-cover"
@@ -101,8 +106,8 @@ export default function Home() {
               {/* Decorative Card */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-accent/50 max-w-xs animate-bounce" style={{ animationDuration: '3s' }}>
                 <div className="flex items-center gap-4">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <Star className="w-6 h-6 text-green-600 fill-green-600" />
+                  <div className="bg-amber-100 p-3 rounded-full shadow-inner">
+                    <Star className="w-6 h-6 text-amber-500 fill-amber-500 drop-shadow-sm" />
                   </div>
                   <div>
                     <p className="font-bold text-foreground">4.9/5 Rating</p>
@@ -166,6 +171,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Meet Our Doctors Section */}
+      <section className="py-24 bg-white relative">
+        {/* Subtle background element */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl -z-10" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-primary font-semibold tracking-wider uppercase mb-3">Expert Team</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Lead Dentists</h3>
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+              With decades of combined experience, our highly skilled doctors are dedicated to providing you with the most advanced, comfortable, and personalized dental care.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            {/* Dr. Jalba Dhumal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-[2rem] p-8 md:p-10 border border-accent shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col items-center sm:items-start sm:flex-row gap-8 relative overflow-hidden"
+            >
+              {/* Decorative gradient corner */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500" />
+              
+              <div className="w-32 h-32 md:w-36 md:h-36 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 shadow-inner border-[6px] border-white group-hover:border-primary/10 transition-colors overflow-hidden relative">
+                 <Image 
+                   src="/dr.jalba.png" 
+                   alt="Dr. Jalba Dhumal" 
+                   fill 
+                   className="object-cover object-top"
+                 />
+              </div>
+              <div className="text-center sm:text-left flex-1">
+                <h4 className="text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">Dr. Jalba Dhumal</h4>
+                <p className="text-primary font-semibold mb-4 tracking-wide uppercase text-sm">Chief Dental Surgeon</p>
+                <p className="text-foreground/70 mb-5 text-base leading-relaxed">
+                  A highly respected professional with extensive experience in advanced dental procedures. Known for handling patients with exceptional care and precision, ensuring the best possible outcomes.
+                </p>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center justify-center sm:justify-start gap-3 text-sm font-medium text-foreground/80">
+                    <div className="bg-primary/10 p-1.5 rounded-full">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
+                    <span>Expert Diagnosis & Treatment</span>
+                  </div>
+                  <div className="flex items-center justify-center sm:justify-start gap-3 text-sm font-medium text-foreground/80">
+                    <div className="bg-primary/10 p-1.5 rounded-full">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
+                    <span>Advanced Dental Surgeries</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Dr. Jyoti Dhumal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-[2rem] p-8 md:p-10 border border-accent shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col items-center sm:items-start sm:flex-row gap-8 relative overflow-hidden"
+            >
+              {/* Decorative gradient corner */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500" />
+
+              <div className="w-32 h-32 md:w-36 md:h-36 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 shadow-inner border-[6px] border-white group-hover:border-primary/10 transition-colors overflow-hidden relative">
+                 <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
+                    <span className="text-5xl font-bold text-primary/30 tracking-tighter">JD</span>
+                 </div>
+              </div>
+              <div className="text-center sm:text-left flex-1">
+                <h4 className="text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">Dr. Jyoti Dhumal</h4>
+                <p className="text-primary font-semibold mb-4 tracking-wide uppercase text-sm">Senior Dental Specialist</p>
+                <p className="text-foreground/70 mb-5 text-base leading-relaxed">
+                  Renowned for her kind and cooperative approach, she brings a gentle touch to dental care. Dedicated to providing a comfortable, reassuring, and painless experience for every patient.
+                </p>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center justify-center sm:justify-start gap-3 text-sm font-medium text-foreground/80">
+                    <div className="bg-primary/10 p-1.5 rounded-full">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
+                    <span>Compassionate Patient Care</span>
+                  </div>
+                  <div className="flex items-center justify-center sm:justify-start gap-3 text-sm font-medium text-foreground/80">
+                    <div className="bg-primary/10 p-1.5 rounded-full">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
+                    <span>Painless Dental Procedures</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-24 bg-accent/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,7 +310,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -216,7 +322,7 @@ export default function Home() {
               >
                 <div className="flex space-x-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-primary text-primary" />
+                    <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400 drop-shadow-sm" />
                   ))}
                 </div>
                 <p className="text-foreground/80 text-lg mb-8 italic">&quot;{testimonial.text}&quot;</p>

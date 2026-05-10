@@ -4,12 +4,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
-  { src: "/assets/hero_clinic.png", alt: "Modern Clinic Reception", category: "Clinic" },
+  { src: "/clinic.png", alt: "Geetai Dental Hospital Clinic", category: "Clinic" },
   { src: "/assets/gallery_treatment.png", alt: "State-of-the-art Treatment Room", category: "Clinic" },
   { src: "/assets/staff_group.png", alt: "Our Expert Dental Team", category: "Staff" },
-  { src: "/assets/service_general.png", alt: "General Dentistry Checkup", category: "Services" },
-  { src: "/assets/service_cosmetic.png", alt: "Cosmetic Dentistry Results", category: "Services" },
-  { src: "/assets/service_ortho.png", alt: "Clear Aligners", category: "Services" },
+  { src: "/assets/service_consultation.png", alt: "Dental Consultation", category: "Services" },
+  { src: "/assets/service_braces.png", alt: "Orthodontic Braces", category: "Services" },
+  { src: "/assets/service_whitening.png", alt: "Teeth Whitening Treatment", category: "Services" },
+  { src: "/assets/service_implant.png", alt: "Dental Implant Procedure", category: "Services" },
+  { src: "/assets/service_rootcanal.png", alt: "Root Canal Treatment", category: "Services" },
+  { src: "/assets/service_extraction.png", alt: "Tooth Extraction", category: "Services" },
 ];
 
 export default function GalleryPage() {
