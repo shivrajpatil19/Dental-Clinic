@@ -60,12 +60,12 @@ set /a attempts=0
 :OPEN_BROWSER
 echo.
 echo  [OK] Server is ready!
-echo  [*] Opening http://localhost:3000 in your browser...
+echo  [*] Opening http://localhost:3000/Dental-Clinic in your browser...
 echo.
-start http://localhost:3000
+start http://localhost:3000/Dental-Clinic
 
 echo  =============================================
-echo    Website is running at http://localhost:3000
+echo    Website is running at http://localhost:3000/Dental-Clinic
 echo    Close the "Dev Server" window to stop it.
 echo  =============================================
 echo.

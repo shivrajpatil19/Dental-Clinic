@@ -8,14 +8,14 @@ import Image from "next/image";
 const GALLERY_IMAGES = [
   // Doctor
   {
-    src: "/dr.jalba.png",
+    src: "/Dental-Clinic/dr.jalba.png",
     alt: "Dr. Jalba – Lead Dentist",
     category: "Doctor",
     caption: "Dr. Jalba",
     span: "tall",
   },
   {
-    src: "/doctor_at_desk.jpeg",
+    src: "/Dental-Clinic/doctor_at_desk.jpeg",
     alt: "Doctor at reception desk",
     category: "Doctor",
     caption: "Doctor at Work",
@@ -24,21 +24,21 @@ const GALLERY_IMAGES = [
 
   // Clinic Interior
   {
-    src: "/clinic_treatment_room.jpeg",
+    src: "/Dental-Clinic/clinic_treatment_room.jpeg",
     alt: "Main treatment room with dual dental chairs",
     category: "Interior",
     caption: "Main Treatment Room",
     span: "wide",
   },
   {
-    src: "/dental_chair_unit.jpeg",
+    src: "/Dental-Clinic/dental_chair_unit.jpeg",
     alt: "Dental chair and treatment unit",
     category: "Interior",
     caption: "Dental Chair Unit",
     span: "normal",
   },
   {
-    src: "/waiting_area.jpeg",
+    src: "/Dental-Clinic/waiting_area.jpeg",
     alt: "Patient waiting area inside the clinic",
     category: "Interior",
     caption: "Patient Waiting Area",
@@ -47,7 +47,7 @@ const GALLERY_IMAGES = [
 
   // Exterior
   {
-    src: "/clinic_exterior.jpeg",
+    src: "/Dental-Clinic/clinic_exterior.jpeg",
     alt: "Clinic exterior with glass facade",
     category: "Exterior",
     caption: "Clinic Exterior",
@@ -56,14 +56,14 @@ const GALLERY_IMAGES = [
 
   // Equipment
   {
-    src: "/uv_sterilizer.jpeg",
+    src: "/Dental-Clinic/uv_sterilizer.jpeg",
     alt: "UV sterilizer and dental supplies",
     category: "Equipment",
     caption: "Sterilization & Supplies",
     span: "normal",
   },
   {
-    src: "/equipment_workstation.jpeg",
+    src: "/Dental-Clinic/equipment_workstation.jpeg",
     alt: "Dental equipment workstation",
     category: "Equipment",
     caption: "Equipment Workstation",
@@ -72,7 +72,7 @@ const GALLERY_IMAGES = [
 
   // Treatment
   {
-    src: "/clinic.png",
+    src: "/Dental-Clinic/clinic.png",
     alt: "Dentist with happy patient after treatment",
     category: "Treatment",
     caption: "Happy Patient",

@@ -6,6 +6,7 @@ import { CLINIC_INFO } from "@/lib/constants";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export function Navbar() {
         <div className="flex justify-between h-24 md:h-28 items-center">
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/logo_transparent.png"
+              src={getAssetPath("/logo_transparent.png")}
               alt="Geetai Dental Hospital"
               width={400}
               height={120}

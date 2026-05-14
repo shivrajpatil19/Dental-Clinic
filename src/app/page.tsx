@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, ArrowRight } from "lucide-react";
 import { CLINIC_INFO } from "@/lib/constants";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Home() {
   const features = [
@@ -95,7 +96,7 @@ export default function Home() {
             >
               <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
                 <Image 
-                  src="/clinic.png"
+                  src={getAssetPath("/clinic.png")}
                   alt="Modern Dental Clinic"
                   fill
                   className="object-cover"
@@ -139,7 +140,7 @@ export default function Home() {
               className="relative aspect-square md:aspect-[4/3] lg:aspect-square rounded-[2rem] overflow-hidden shadow-lg"
             >
               <Image 
-                src="/assets/staff_group.png"
+                src={getAssetPath("/assets/staff_group.png")}
                 alt="Our Dental Team"
                 fill
                 className="object-cover"
@@ -200,7 +201,7 @@ export default function Home() {
               
               <div className="w-32 h-32 md:w-36 md:h-36 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 shadow-inner border-[6px] border-white group-hover:border-primary/10 transition-colors overflow-hidden relative">
                  <Image 
-                   src="/dr.jalba.png" 
+                   src={getAssetPath("/dr.jalba.png")} 
                    alt="Dr. Jalba Dhumal" 
                    fill 
                    className="object-cover object-top"

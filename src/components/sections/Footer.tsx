@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CLINIC_INFO } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-flex items-center justify-center bg-white/85 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/50 shadow-[0_8px_32px_rgba(255,255,255,0.15)] transition-all duration-300 hover:scale-[1.02] hover:bg-white/95">
               <Image 
-                src="/logo_transparent.png" 
+                src={getAssetPath("/logo_transparent.png")} 
                 alt="Geetai Dental Hospital" 
                 width={400}
                 height={120}

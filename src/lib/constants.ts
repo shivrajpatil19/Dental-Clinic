@@ -32,7 +32,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Your First Step to a Healthy Smile",
     description:
       "Every great dental journey starts with a thorough consultation and accurate diagnostics. Our general dentistry services form the foundation of your oral health.",
-    image: "/assets/service_consultation.png",
+    image: "/Dental-Clinic/assets/service_consultation.png",
     iconName: "Stethoscope",
     color: "blue",
     subServices: [
@@ -72,7 +72,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Straighten Your Smile with Confidence",
     description:
       "Achieve perfectly aligned teeth with our modern orthodontic solutions. We offer both traditional metal braces and aesthetic ceramic braces to suit your lifestyle and budget.",
-    image: "/assets/service_braces.png",
+    image: "/Dental-Clinic/assets/service_braces.png",
     iconName: "Smile",
     color: "purple",
     subServices: [
@@ -117,7 +117,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Restore Your Complete, Natural-Looking Smile",
     description:
       "Missing teeth affect your confidence, speech, and ability to eat. We offer a full range of modern tooth replacement solutions, from permanent implants to affordable removable options.",
-    image: "/assets/service_implant.png",
+    image: "/Dental-Clinic/assets/service_implant.png",
     iconName: "Layers",
     color: "teal",
     subServices: [
@@ -193,7 +193,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Save Your Natural Tooth, Eliminate Pain",
     description:
       "A root canal is not something to fear — it is a tooth-saving procedure that relieves severe pain caused by infection. With modern techniques, the treatment is comfortable and highly effective.",
-    image: "/assets/service_rootcanal.png",
+    image: "/Dental-Clinic/assets/service_rootcanal.png",
     iconName: "HeartPulse",
     color: "red",
     subServices: [
@@ -223,7 +223,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Safe, Painless, and Expert Extractions",
     description:
       "When a tooth is too damaged to save, extraction is the safest option. Our expert team ensures every extraction is as quick and comfortable as possible, with clear aftercare instructions.",
-    image: "/assets/service_extraction.png",
+    image: "/Dental-Clinic/assets/service_extraction.png",
     iconName: "Scissors",
     color: "orange",
     subServices: [
@@ -268,7 +268,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Bright, Clean, Radiant Smiles",
     description:
       "A clean, white smile is a healthy smile. Our professional whitening and cleaning treatments remove stains, tartar, and discolouration, revealing the natural brilliance of your teeth.",
-    image: "/assets/service_whitening.png",
+    image: "/Dental-Clinic/assets/service_whitening.png",
     iconName: "Sparkles",
     color: "yellow",
     subServices: [
@@ -311,7 +311,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Perfect Your Smile with Subtle Precision",
     description:
       "Minor imperfections can make a big difference. Tooth reshaping is a fast, painless, single-visit procedure that corrects chips, uneven edges, and small size discrepancies for a beautifully balanced smile.",
-    image: "/assets/service_cosmetic.png",
+    image: "/Dental-Clinic/assets/service_cosmetic.png",
     iconName: "Wand2",
     color: "pink",
     subServices: [
@@ -338,7 +338,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     tagline: "Advanced, Minimally Invasive Dental Care",
     description:
       "Experience the future of dental care. Laser dentistry uses focused light energy to perform a wide range of procedures with extreme precision, minimal discomfort, and faster healing times.",
-    image: "/assets/gallery_treatment.png",
+    image: "/Dental-Clinic/assets/gallery_treatment.png",
     iconName: "Zap",
     color: "green",
     subServices: [
