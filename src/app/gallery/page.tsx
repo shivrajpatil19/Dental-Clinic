@@ -89,6 +89,26 @@ export default function GalleryPage() {
   const filtered =
     active === "All" ? GALLERY_IMAGES : GALLERY_IMAGES.filter((img) => img.category === active);
 
+  const currentIndex = lightbox ? filtered.findIndex((img) => img.src === lightbox.src) : -1;
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (currentIndex < filtered.length - 1) {
+      setLightbox(filtered[currentIndex + 1]);
+    } else {
+      setLightbox(filtered[0]);
+    }
+  };
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (currentIndex > 0) {
+      setLightbox(filtered[currentIndex - 1]);
+    } else {
+      setLightbox(filtered[filtered.length - 1]);
+    }
+  };
+
   return (
     <>
       {/* ── Lightbox ──────────────────────────────────────────────── */}
@@ -124,11 +144,27 @@ export default function GalleryPage() {
                 <p className="text-white text-lg font-bold mt-0.5">{lightbox.caption}</p>
               </div>
               <button
-                onClick={() => setLightbox(null)}
+                onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
                 className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/20 hover:bg-white/40 transition text-white text-xl font-bold flex items-center justify-center"
                 aria-label="Close lightbox"
               >
                 ×
+              </button>
+              
+              {/* Navigation Buttons */}
+              <button
+                onClick={handlePrev}
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 transition text-white flex items-center justify-center backdrop-blur-sm"
+                aria-label="Previous image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button
+                onClick={handleNext}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 transition text-white flex items-center justify-center backdrop-blur-sm"
+                aria-label="Next image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
               </button>
             </motion.div>
           </motion.div>
@@ -136,7 +172,7 @@ export default function GalleryPage() {
       </AnimatePresence>
 
       {/* ── Page ──────────────────────────────────────────────────── */}
-      <div className="min-h-screen bg-white pt-28 pb-20">
+      <div className="min-h-screen bg-white pt-24 pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Header */}
@@ -152,7 +188,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.05 }}
-              className="text-4xl md:text-5xl font-bold text-foreground mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
             >
               Photo Gallery
             </motion.h1>

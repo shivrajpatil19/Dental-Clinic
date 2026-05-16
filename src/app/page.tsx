@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-accent/10">
+      <section className="relative pt-28 pb-16 lg:pt-40 lg:pb-32 overflow-hidden bg-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
@@ -53,7 +53,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-6"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-4 sm:mb-6"
               >
                 Your Smile is Our <br/>
                 <span className="text-primary">Top Priority</span>
@@ -92,7 +92,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative hidden lg:block"
+              className="relative mt-12 lg:mt-0"
             >
               <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
                 <Image 
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* Intro / About Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 lg:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div 
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Meet Our Doctors Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 lg:py-24 bg-white relative">
         {/* Subtle background element */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl -z-10" />
         
@@ -274,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-accent/20">
+      <section className="py-16 lg:py-24 bg-accent/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose {CLINIC_INFO.name}?</h2>
@@ -302,7 +302,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Patient Stories</h2>

@@ -35,7 +35,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <section className="bg-white pt-32 pb-16 relative overflow-hidden">
+      <section className="bg-white pt-24 pb-12 lg:pt-32 lg:pb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -z-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.p
@@ -49,7 +49,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-foreground mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-4 sm:mb-6"
           >
             Our Complete Range of <span className="text-primary">Dental Services</span>
           </motion.h1>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Categories Grid */}
-      <section className="py-20">
+      <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {SERVICE_CATEGORIES.map((category, index) => {
@@ -133,9 +133,9 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-20 bg-primary">
+      <section className="py-16 lg:py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book Your Appointment?</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book Your Appointment?</h2>
           <p className="text-white/80 text-lg mb-8">Call us or WhatsApp us today. Consultations start at just ₹200.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

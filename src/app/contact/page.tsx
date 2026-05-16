@@ -8,23 +8,35 @@ import { MapPin, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus("submitting");
-    // Simulate form submission
+
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get("firstName");
+    const lastName = formData.get("lastName");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const service = formData.get("service");
+    const message = formData.get("message");
+
+    const text = `*New Appointment Request*%0A%0A*Name:* ${firstName} ${lastName}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Service:* ${service}%0A*Notes:* ${message}`;
+
+    // Simulate delay for UI feedback, then redirect to WhatsApp
     setTimeout(() => {
       setFormStatus("success");
-    }, 1500);
+      window.open(`${CLINIC_INFO.whatsappUrl}?text=${text}`, '_blank');
+    }, 1000);
   };
 
   return (
-    <div className="py-20 bg-accent/10">
+    <div className="py-16 lg:py-20 bg-accent/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold text-foreground mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6"
           >
             Contact & Booking
           </motion.h1>
@@ -82,9 +94,17 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Google Maps Placeholder */}
-            <div className="h-64 w-full bg-accent/30 rounded-3xl overflow-hidden border border-accent flex items-center justify-center">
-              <p className="text-foreground/50 font-medium">[ Google Maps Embedded iframe Placeholder ]</p>
+            {/* Google Maps Embedded iframe */}
+            <div className="h-64 w-full bg-accent/30 rounded-3xl overflow-hidden border border-accent flex items-center justify-center relative">
+              <iframe
+                src="https://maps.google.com/maps?q=Geetai+Dental+Hospital,+Malegaon+Road,+Taroda+Naka,+Nanded,+Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="absolute inset-0 w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Geetai Dental Hospital Location on Google Maps"
+              ></iframe>
             </div>
           </motion.div>
 
@@ -123,7 +143,8 @@ export default function ContactPage() {
                     <label htmlFor="firstName" className="text-sm font-medium text-foreground">First Name</label>
                     <input 
                       type="text" 
-                      id="firstName" 
+                      id="firstName"
+                      name="firstName"
                       required
                       className="w-full px-4 py-3 rounded-xl border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="John"
@@ -133,7 +154,8 @@ export default function ContactPage() {
                     <label htmlFor="lastName" className="text-sm font-medium text-foreground">Last Name</label>
                     <input 
                       type="text" 
-                      id="lastName" 
+                      id="lastName"
+                      name="lastName"
                       required
                       className="w-full px-4 py-3 rounded-xl border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="Doe"
@@ -142,11 +164,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground">Email Address</label>
+                  <label htmlFor="email" className="text-sm font-medium text-foreground">Email Address (Optional)</label>
                   <input 
                     type="email" 
-                    id="email" 
-                    required
+                    id="email"
+                    name="email"
                     className="w-full px-4 py-3 rounded-xl border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     placeholder="john@example.com"
                   />
@@ -156,7 +178,8 @@ export default function ContactPage() {
                   <label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number</label>
                   <input 
                     type="tel" 
-                    id="phone" 
+                    id="phone"
+                    name="phone"
                     required
                     className="w-full px-4 py-3 rounded-xl border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     placeholder="(555) 123-4567"
@@ -166,22 +189,28 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <label htmlFor="service" className="text-sm font-medium text-foreground">Service Required</label>
                   <select 
-                    id="service" 
+                    id="service"
+                    name="service"
                     required
                     className="w-full px-4 py-3 rounded-xl border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-foreground"
                   >
                     <option value="">Select a service...</option>
-                    <option value="general">General Checkup</option>
-                    <option value="cosmetic">Cosmetic Dentistry</option>
-                    <option value="orthodontics">Orthodontics</option>
-                    <option value="other">Other / Not Sure</option>
+                    <option value="Doctor Consultation">Doctor Consultation</option>
+                    <option value="Root Canal Treatment">Root Canal Treatment</option>
+                    <option value="Teeth Whitening / Cleaning">Teeth Whitening & Cleaning</option>
+                    <option value="Tooth Extraction">Tooth Extraction</option>
+                    <option value="Dental Implants">Dental Implants (Teeth Replacement)</option>
+                    <option value="Teeth Braces">Teeth Braces (Orthodontics)</option>
+                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                    <option value="Other / Not Sure">Other / Not Sure</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-foreground">Additional Notes (Optional)</label>
                   <textarea 
-                    id="message" 
+                    id="message"
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     placeholder="How can we help you today?"
