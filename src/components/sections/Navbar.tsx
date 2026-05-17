@@ -45,9 +45,7 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href={CLINIC_INFO.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+917020911752"
               className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-medium hover:bg-primary/90 transition-colors"
             >
               Book Appointment
@@ -87,9 +85,7 @@ export function Navbar() {
                 </Link>
               ))}
               <a
-                href={CLINIC_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+917020911752"
                 onClick={() => setIsOpen(false)}
                 className="block text-center mt-4 bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium"
               >
